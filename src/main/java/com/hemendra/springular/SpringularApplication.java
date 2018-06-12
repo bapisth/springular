@@ -2,8 +2,12 @@ package com.hemendra.springular;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
 @SpringBootApplication
+@EnableJpaRepositories
+@EntityScan(basePackages = {"com.bipros.pegamunda.generated.enity", "com.hemendra.springular"})
 public class SpringularApplication {
 
 	public static void main(String[] args) {

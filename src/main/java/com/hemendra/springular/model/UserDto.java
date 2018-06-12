@@ -3,13 +3,21 @@ package com.hemendra.springular.model;
 /**
  * @author Hemendra
  */
-public class User {
+public class UserDto {
+
+    private Integer id;
+    private String userName;
+    private String password;
+
     private String name;
     private String address;
     private String mobile;
     private String branch;
 
-    public User(String name, String address, String mobile, String branch) {
+    public UserDto() {
+    }
+
+    public UserDto(String name, String address, String mobile, String branch) {
         this.name = name;
         this.address = address;
         this.mobile = mobile;
@@ -48,9 +56,25 @@ public class User {
         this.branch = branch;
     }
 
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
+        return "UserDto{" +
                 "name='" + name + '\'' +
                 ", address='" + address + '\'' +
                 ", mobile='" + mobile + '\'' +
